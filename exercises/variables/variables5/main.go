@@ -1,10 +1,11 @@
 // variables5
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
+
+// Initialize this constant
 
 const Pi
 

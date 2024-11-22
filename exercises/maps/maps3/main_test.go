@@ -1,7 +1,7 @@
 // maps3
 // Make me compile!
 //
-// I AM NOT DONE
+
 package main
 
 import "testing"
@@ -39,8 +39,22 @@ func TestDeletePhone(t *testing.T) {
 	} // don't change the original map
 
 	totalPhones := len(phoneBook)
+
 	expectedTotalPhones := 1
 	if totalPhones != expectedTotalPhones {
 		t.Errorf("phoneBook should have only %d contact, but got %d", expectedTotalPhones, totalPhones)
+	}
+}
+
+func TestNotInMap(t *testing.T) {
+	phoneBook := map[string]string{
+		"Ana":  "+01 101 102",
+		"John": "+01 333 666",
+	}
+
+	_, ok := phoneBook["Ana"]
+
+	if ok {
+		t.Errorf("ok should be false, but it is %t", ok)
 	}
 }

@@ -6,6 +6,5 @@
 		"ghcr.io/devcontainers/features/go:1": {
 			"version": "latest"
 		},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
 	}
 }

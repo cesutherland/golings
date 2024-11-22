@@ -1,7 +1,6 @@
 // if1
 // Make me compile!
 
-// I AM NOT DONE
 package main_test
 
 import "testing"
