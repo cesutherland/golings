@@ -248,6 +248,40 @@ Embedding a struct is done using just the struct name.
 After embedding, fields can be accessed directly through the base struct without specifying the full path, but you can if needed."""
 
 [[exercises]]
+name = "pointers1"
+path = "exercises/pointers/pointers1/main.go"
+mode = "compile"
+hint = """
+We are calling the swap function with the address of x and y.
+The swap function will need to handle those addresses (pointers) to swap the values and not just copies of the values.
+"""
+
+[[exercises]]
+name = "pointers2"
+path = "exercises/pointers/pointers2/main.go"
+mode = "compile"
+hint = """
+Notice that the update UpdateName function takes a pointer to a Person struct as an argument so it can modify the
+struct.
+"""
+
+[[exercises]]
+name = "methods1"
+path = "exercises/methods/methods1/main.go"
+mode = "compile"
+hint = """
+Make sure to invoke the method on the value receiver `person`
+"""
+
+[[exercises]]
+name = "methods2"
+path = "exercises/methods/methods2/main_test.go"
+mode = "test"
+hint = """
+Make sure to invoke the methods with the right receiver types.
+"""
+
+[[exercises]]
 name = "anonymous_functions1"
 path = "exercises/anonymous_functions/anonymous_functions1/main.go"
 mode = "compile"
@@ -293,38 +327,4 @@ Type mismatches in arithmetic operations are not allowed, but generics enable fu
 In Go, type constraints can be declared. For this exercise, the `Number` interface is an example.
 
 Ensure you include the appropriate type signature.
-"""
-
-[[exercises]]
-name = "concurrent1"
-path = "exercises/concurrent/concurrent1/main_test.go"
-mode = "test"
-hint = """
-We have multiple printers (though these may also be non-functional).
-
-Our goal is to print something, but what exactly should be printed?
-"""
-
-[[exercises]]
-name = "concurrent2"
-path = "exercises/concurrent/concurrent2/main_test.go"
-mode = "test"
-hint = """
-Updating a variable from multiple goroutines can lead to a data race. A data race occurs when multiple goroutines read and write the same variable simultaneously without proper synchronization.
-
-Consider a counter as an example: concurrent updates can lead to unexpected results.
-
-Learn more about mutexes to handle this issue: https://pkg.go.dev/sync#Mutex.
-"""
-
-[[exercises]]
-name = "concurrent3"
-path = "exercises/concurrent/concurrent3/main_test.go"
-mode = "test"
-hint = """
-Writing messages to closed channels will cause a panic.
-
-To prevent panics, avoid sending messages to channels that have been closed.
-
-Note: Channels can be iterated using `for-range` loops.
 """

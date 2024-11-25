@@ -10,7 +10,7 @@ func main() {
 	fmt.Printf("x has the value %s\n", x)
 
 	if true {
-		x = 1
+		x = 1 // make this a shadowed local copy of x
 		fmt.Println(x + 1)
 	}
 
