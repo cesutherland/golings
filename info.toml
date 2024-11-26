@@ -278,7 +278,24 @@ name = "methods2"
 path = "exercises/methods/methods2/main_test.go"
 mode = "test"
 hint = """
-Make sure to invoke the methods with the right receiver types.
+Make sure to invoke the methods with the right receivers.
+"""
+
+[[exercises]]
+name = "interfaces1"
+path = "exercises/interfaces/interfaces1/main.go"
+mode = "compile"
+hint = """
+An interface's method set describes the behavior expected of implementing items.
+Here both Circle and Rectangle have a method Area() so that would be a good place to start.
+"""
+
+[[exercises]]
+name = "interfaces2"
+path = "exercises/interfaces/interfaces2/main.go"
+mode = "compile"
+hint = """
+There is a special interface that any value can satisfy. The empty interface.
 """
 
 [[exercises]]

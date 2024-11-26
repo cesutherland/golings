@@ -7,7 +7,7 @@ Anonymous functions are useful when you want to define a function inline without
 
 An anonymous function can be created as such:
 ```aiignore
-sayHello := func() {
+sayHello := func(n string) {
     fmt.Printf("Hello %s\n", n)
 }
 

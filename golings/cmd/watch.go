@@ -50,7 +50,7 @@ func WatchCmd(infoFile string) *cobra.Command {
 					color.Green("Bye by golings o/")
 					os.Exit(0)
 				default:
-					color.Yellow("only list or hint commands are available")
+					color.Yellow("only list, hint, or quit/exit commands are available")
 				}
 			}
 		},

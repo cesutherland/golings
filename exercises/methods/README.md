@@ -1,6 +1,6 @@
 ## Methods
 
-Go does not have classes. However, you can define methods on types.
+Go does not have classes. However, you can define methods on any **user-declared** type.
 
 A method is a function with a special receiver argument.
 

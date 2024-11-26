@@ -39,25 +39,34 @@ func RunNextExercise(infoFile string) {
 		color.Blue("Progress: %d/%d (%.2f%%)\n\n", done, total, progress*100)
 	}
 
-	exercise, err := exercises.NextPending(infoFile)
-	if err != nil {
-		color.Red("Failed to find next exercises")
-	}
-
-	result, err := exercise.Run()
-	if err != nil {
-		color.Cyan("Failed to compile the exercise %s\n\n", result.Exercise.Path)
-		color.White("Check the output below: \n\n")
-		color.Red(result.Err)
-		color.Red(result.Out)
-		color.Yellow("If you feel stuck, ask a hint by executing `golings hint %s`", result.Exercise.Name)
+	// don't muck with this too much...but at least show a done message
+	if progress == 1 {
+		color.Green(
+			"All exercises are complete!! Use the `exit` command to exit or `list` to view the exercises.")
 	} else {
-		color.Green("Congratulations!\n\n")
-		color.Green("Here is the output of your program:\n\n")
-		color.Cyan(result.Out)
-		if result.Exercise.State() == exercises.Pending {
-			color.White("Remove the 'I AM NOT DONE' from the file to keep going\n")
-			color.Red("exercise is still pending")
+		exercise, err := exercises.NextPending(infoFile)
+		if err != nil {
+			color.Red(
+				"Failed to find next exercise. Use the `exit` command to exit or `list` to view the exercises.`")
+		}
+
+		if exercise.Name != " " {
+			result, err := exercise.Run()
+			if err != nil {
+				color.Cyan("Failed to compile the exercise %s\n\n", result.Exercise.Path)
+				color.White("Check the output below: \n\n")
+				color.Red(result.Err)
+				color.Red(result.Out)
+				color.Yellow("If you feel stuck, ask a hint by executing `golings hint %s`", result.Exercise.Name)
+			} else {
+				color.Green("Congratulations!\n\n")
+				color.Green("Here is the output of your program:\n\n")
+				color.Cyan(result.Out)
+				if result.Exercise.State() == exercises.Pending {
+					color.White("Remove the 'I AM NOT DONE' from the file to keep going\n")
+					color.Red("exercise is still pending")
+				}
+			}
 		}
 	}
 }
