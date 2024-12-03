@@ -29,7 +29,7 @@ func TestGetFirstTwoNames(t *testing.T) {
 
 func TestGetLastTwoNames(t *testing.T) {
 	names := []string{"John", "Maria", "Carl", "Peter"}
-	lastTwoNames := names[1:]
+	lastTwoNames := names[5:10]
 	expectedLastTwoNames := []string{"Carl", "Peter"}
 
 	if !reflect.DeepEqual(lastTwoNames, expectedLastTwoNames) {

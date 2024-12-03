@@ -299,6 +299,24 @@ There is a special interface that any value can satisfy. The empty interface.
 """
 
 [[exercises]]
+name = "errors1"
+path = "exercises/errors/errors1/main.go"
+mode = "compile"
+hint = """
+Reminder that fmt.Errorf() can be used to create an error.
+The error return value needs to be defined in the signature. It's best to return the error interface rather than a concrete type
+"""
+
+[[exercises]]
+name = "errors2"
+path = "exercises/errors/errors2/main.go"
+mode = "compile"
+hint = """
+Use the information in the other functions to determine the necessary struct fields.
+To implement the error interface, there is one method that needs to be defined!
+"""
+
+[[exercises]]
 name = "anonymous_functions1"
 path = "exercises/anonymous_functions/anonymous_functions1/main.go"
 mode = "compile"
