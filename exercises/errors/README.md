@@ -16,7 +16,6 @@ Functions often return an `error` value, and calling code should handle errors b
 
 ```
 i, err := strconv.Atoi("42")
-
 if err != nil {
     fmt.Printf("couldn't convert number: %v\n", err)
     return
@@ -45,7 +44,7 @@ The `fmt` package can be used to add dynamic data to the error, such as an `int`
 import "fmt"
 
 func DoWork() error {
-    return fmt.Errorf("something broke"))
+    return fmt.Errorf("something broke: %s", "something")
 }
 ```
 
