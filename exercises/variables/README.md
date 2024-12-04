@@ -11,7 +11,7 @@ var x = 5
 var x unint8 = 5
 ```
 
-2. Using short assignment inside of a function
+2. Using short assignment inside of a function using Go's type inference
 ```aiignore
 x := 5
 ```
@@ -24,7 +24,7 @@ Constants can be character, string, boolean, or numeric values.
 
 Constants cannot be declared using the := syntax.
 
-Constants cannot be altered or re-assigned.
+Constants are immutable.
 
 Constants should be named like variable in regard to capitalization (Capitalized const will be exported).
 

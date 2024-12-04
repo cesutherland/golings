@@ -25,6 +25,8 @@ fmt.Println(*p) // read i through the pointer p
 
 Unlike C, Go has no pointer arithmetic (outside of the unsafe package).
 
+Unlike C, Golang is a garbage collected language, so we do not need to manage memory manually.
+
 ### When to Use
 
 Most of the time, we'll want to use a pointer when we want to share and modify data.
@@ -35,7 +37,7 @@ Most of the time, we'll want to use a pointer when we want to share and modify d
 * Some objects can't be copied (Mutex, WaitGroup)
 * Some objects are too large to efficiently copy (> 64 bytes)
 * When decoding protocol data into an object (JSON)
-* To signal a `null` object
+* To signal a `nil` object
 
 ### Function Parameters
 

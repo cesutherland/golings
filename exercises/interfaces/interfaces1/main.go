@@ -26,7 +26,7 @@ type Circle struct {
 	Radius float64
 }
 
-func (c Circle) Area() float64 {
+func ()  float64 {  // we might need a method here to implement the Shape interface
 	return c.Radius * c.Radius * math.Pi
 }
 

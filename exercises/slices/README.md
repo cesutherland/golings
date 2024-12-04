@@ -32,6 +32,8 @@ len(s) == 5
 cap(s) == 5
 ```
 
+See the [Slices package](https://pkg.go.dev/slices) for further documentation.
+
 ### Zero Value
 The zero value of a slice is `nil`. The len and cap functions will both return 0 for a nil slice.
 

@@ -1,6 +1,6 @@
 # Maps
 
-A map maps keys to values. It is unordered.
+A map implements a hashmap as key/value pairs. It is unordered.
 
 The zero value of a map is nil. A nil map has no keys, nor can keys be added. 
 If a key is attempted to be retrieved the zero value for value type will be returned.
@@ -71,6 +71,12 @@ Test that a key is present with a two-value assignment:
 
 If key is in `m`, `ok` is `true`. If not, `ok` is `false`. 
 (`ok` is the convention in Golang, but it could be anything)
+
+```aiignore
+if _, ok := m[key]; !ok {
+    // key doesn't exist, handle it
+}
+```
 
 **If key is not in the map, then elem is the zero value for the map's element type.**
 
