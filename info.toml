@@ -196,22 +196,27 @@ hint = """
 Verify that the keys used to access map values match the keys defined in the phoneBook map."""
 
 [[exercises]]
-name = "range1"
-path = "exercises/range/range1/main.go"
+name = "loops1"
+path = "exercises/loops/loops1/main.go"
 mode = "compile"
 hint = """
-Use the `range` keyword to iterate over collections like arrays, slices, and maps."""
+A normal for loop uses 3 components: init, condition, post
+
+A `while` loop only needs a condition statement
+"""
 
 [[exercises]]
-name = "range2"
-path = "exercises/range/range2/main.go"
+name = "loops2"
+path = "exercises/loops/loops2/main.go"
 mode = "compile"
 hint = """
-Use the `range` keyword to iterate over map values. Unlike arrays and slices, maps are iterated over by keys and values."""
+Use the `range` keyword to iterate over map values.
+Slices and arrays are iterated over by index and value.
+Unlike arrays and slices, maps are iterated over by keys and values."""
 
 [[exercises]]
-name = "range3"
-path = "exercises/range/range3/main_test.go"
+name = "loops3"
+path = "exercises/loops/loops3/main_test.go"
 mode = "test"
 hint = """
 Use a `for` loop with `range` to check if each number is even and append it to the `evenNumbers` slice."""

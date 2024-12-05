@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/fatih/color"
-	"github.com/mauricioabreu/golings/golings/exercises"
 	"github.com/spf13/cobra"
+	"github.com/sqsp-scratchpad/acuity-golings/golings/exercises"
 )
 
 func HintCmd(infoFile string) *cobra.Command {

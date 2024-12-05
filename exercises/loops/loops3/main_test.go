@@ -1,5 +1,7 @@
-// range3
+// loops3
 // Make me compile!
+
+// I AM NOT DONE
 package main_test
 
 import (

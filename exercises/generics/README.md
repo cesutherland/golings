@@ -23,10 +23,10 @@ type List[T any] struct {
 
 ### Constraints
 
-Each type parameter has a type constraint that acts as a kind of meta-type for the type parameter. Each type constraint specifies the permissible type arguments that calling code can use for the respective type parameter.
+Each type parameter has a constraint that acts as a kind of meta-type for the parameter. Each constraint specifies the permissible type arguments that calling code can use for the respective parameter.
 
-While a type parameter’s constraint typically represents a set of types, at compile time the type parameter stands for a single type – the type provided as a type argument by the calling code. 
-If the type argument’s type isn’t allowed by the type parameter’s constraint, the code won’t compile.
+While a parameter’s constraint typically represents a set of types, at compile time the parameter stands for a single type – the type provided as an argument by the calling code. 
+If the argument’s type isn’t allowed by the parameter’s constraint, the code won’t compile.
 
 Constraints can come from built-in types, a union of types, an interface of unions, or from the 
 [constraints package](golang.org/x/exp/constraints)

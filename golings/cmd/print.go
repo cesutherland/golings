@@ -7,8 +7,8 @@ import (
 	"runtime"
 
 	"github.com/fatih/color"
-	"github.com/mauricioabreu/golings/golings/exercises"
-	"github.com/mauricioabreu/golings/golings/ui"
+	"github.com/sqsp-scratchpad/acuity-golings/golings/exercises"
+	"github.com/sqsp-scratchpad/acuity-golings/golings/ui"
 )
 
 func PrintHint(infoFile string) {

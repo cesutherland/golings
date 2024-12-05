@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mauricioabreu/golings/golings/exercises"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/sqsp-scratchpad/acuity-golings/golings/exercises"
 )
 
 func TestExercises(t *testing.T) {

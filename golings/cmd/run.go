@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/mauricioabreu/golings/golings/exercises"
 	"github.com/schollz/progressbar/v3"
 	"github.com/spf13/cobra"
+	"github.com/sqsp-scratchpad/acuity-golings/golings/exercises"
 )
 
 func RunCmd(infoFile string) *cobra.Command {

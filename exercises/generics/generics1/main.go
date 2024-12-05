@@ -1,15 +1,16 @@
 // generics1
 // Make me compile!
 
+// I AM NOT DONE
 package main
 
 import "fmt"
 
 func main() {
-	print("Hello, World!")
-	print(42)
+	printMe("Hello, World!")
+	printMe(42)
 }
 
-func print(value) {
+func printMe[](value) { // we're missing a type parameter here that would allow both string and int or maybe any
 	fmt.Println(value)
 }
