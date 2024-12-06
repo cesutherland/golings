@@ -80,11 +80,12 @@ You can do that in Go by implementing custom errors type.
 ```aiignore
 type MyError struct {
     Var1 string
+    Var2 string
     Msg  string
 }
 
-func (m MyError) Error() {
-    fmt.Sprintf("there was an error with %s and %s: (%s)", e.Var1, e.Var2, e.Msg)
+func (m MyError) Error() string {
+    return fmt.Sprintf("there was an error with %s and %s: (%s)", m.Var1, m.Var2, m.Msg)
 }
 
 func Do() error {
