@@ -2,7 +2,7 @@
 
 ## Acuity Introduction
 
-We've forked this tool to use as an interactive introduction to Golang. We've added more information to various 
+We've forked this tool from [golings](https://github.com/mauricioabreu/golings) to use as an interactive introduction to Golang. We've added more information to various 
 READMEs and created several new sections. **We strongly recommend doing the exercises in order using the `watch` command
 as described below**.
 
@@ -27,7 +27,6 @@ Should you choose not to, here is the recommended order:
 
 Any feedback or questions, please reach out in [#acuity-golang](https://squarespace.enterprise.slack.com/archives/C08488AM16D)
 
-## Original README
 
 ![gopher](misc/gopher-dance.gif)
 
