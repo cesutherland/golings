@@ -367,7 +367,7 @@ Remember to use the `go` keyword when you want to start a goroutine.
 
 [[exercises]]
 name = "concurrent2"
-path = "exercises/concurrent/concurrent2/main.go"
+path = "exercises/concurrent/concurrent2/main_test.go"
 mode = "test"
 hint = """
 Try the for range loop to loop through all items in a channel until it's closed.
@@ -376,7 +376,7 @@ Try the for range loop to loop through all items in a channel until it's closed.
 
 [[exercises]]
 name = "concurrent3"
-path = "exercises/concurrent/concurrent3/main.go"
+path = "exercises/concurrent/concurrent3/main_test.go"
 mode = "test"
 hint = """
 Make sure to receive from the right channel in your case statement `case msg1 := <-c1:`
@@ -384,7 +384,7 @@ Make sure to receive from the right channel in your case statement `case msg1 :=
 
 [[exercises]]
 name = "concurrent4"
-path = "exercises/concurrent/concurrent4/main.go"
+path = "exercises/concurrent/concurrent4/main_test.go"
 mode = "test"
 hint = """
 A Mutex Lock and Unlock can help ensure safe concurrent access to shared items.
