@@ -1,5 +1,5 @@
 // errors2
-// Make me compile!
+// Make the tests pass!
 
 // I AM NOT DONE
 package main
