@@ -1,7 +1,5 @@
 // loops2
 // Make me compile!
-
-// I AM NOT DONE
 package main
 
 import "fmt"
@@ -19,7 +17,7 @@ func main() {
 		"John": "+01 333 666",
 	}
 
-	for := range {  // use the key and value of phoneBook in the print statement
+	for phone, name := range phoneBook {
 		fmt.Printf("%s has the %s phone\n", name, phone)
 	}
 }

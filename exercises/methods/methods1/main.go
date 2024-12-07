@@ -1,7 +1,6 @@
 // methods1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import (
@@ -23,7 +22,7 @@ func main() {
 	person := Person{"John", 25}
 
 	// update person's name to be Jane using the method
-	UpdateName("Jane")
+	person.UpdateName("Jane")
 
 	fmt.Println("Name is", person.Name)
 }

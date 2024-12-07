@@ -1,7 +1,6 @@
 // pointers2
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
@@ -20,7 +19,7 @@ func main() {
 	person := Person{"John", 42} // do not change this line
 
 	// update person's name to Jane using the UpdateName function above
-	UpdateName()
+	UpdateName(&person, "Jane")
 
 	// Fix the code so it compiles and the output is "person = Jane"
 	fmt.Printf("person = %s\n", person.Name)

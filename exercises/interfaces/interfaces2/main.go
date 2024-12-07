@@ -1,12 +1,12 @@
 // interfaces2
 // Make me compile!
-
-// I AM NOT DONE
 package main
 
 import "fmt"
 
-func describe(e) string { // which interface can be satisfied by any type?
+type T interface{}
+
+func describe(e T) string { // which interface can be satisfied by any type?
 	return fmt.Sprintf("(%T, %[1]v)", e)
 }
 

@@ -1,7 +1,6 @@
 // primitive_types1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
@@ -13,7 +12,7 @@ func main() {
 	}
 
 	// update the value to make sure this prints
-	storeIsOpen
+	storeIsOpen = false
 	if !storeIsOpen {
 		fmt.Println("Oh no, let's buy some clothes online!")
 	}

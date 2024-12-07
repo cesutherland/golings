@@ -1,7 +1,6 @@
 // errors2
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import (
@@ -11,10 +10,12 @@ import (
 )
 
 type ErrDivideByZero struct { // build the ErrDivideByZero struct
-
+	Number1 float64
+	Number2 float64
+	Message string
 }
 
-func (e ErrDivideByZero)  string { // implement the error interface
+func (e ErrDivideByZero) Error() string { // implement the error interface
 	return fmt.Sprintf("divide by zero error (%s)", e.Message)
 }
 

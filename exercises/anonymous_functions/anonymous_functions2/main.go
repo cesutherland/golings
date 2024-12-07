@@ -1,7 +1,5 @@
 // anonymous functions2
 // Make me compile!
-
-// I AM NOT DONE
 package main
 
 import "fmt"
@@ -9,8 +7,9 @@ import "fmt"
 func main() {
 	var sayBye func(name string)
 
-	sayBye = func() {
-		fmt.Printf("Bye %s", n)
+	sayBye = func(name string) {
+		fmt.Printf("Bye %s", name)
 	}
 
+	sayBye("Carl")
 }

@@ -1,14 +1,12 @@
 // variables4
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
 
 // Initialize this constant
-
-const Pi
+const Pi = 3.1415926
 
 func main() {
 	fmt.Println(Pi)

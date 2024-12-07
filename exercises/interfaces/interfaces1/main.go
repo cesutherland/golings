@@ -1,7 +1,6 @@
 // interfaces1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import (
@@ -11,8 +10,8 @@ import (
 
 // add a Shape interface that both Circle and Rectangle satisfy
 // and is used in the CalculateArea function
-type interface {  // something is missing here
-	// add missing func signature
+type Shape interface { // something is missing here
+	Area() float64
 }
 
 type Rectangle struct {
@@ -27,7 +26,7 @@ type Circle struct {
 	Radius float64
 }
 
-func ()  float64 {  // we might need a method here to implement the Shape interface
+func (c Circle) Area() float64 { // we might need a method here to implement the Shape interface
 	return c.Radius * c.Radius * math.Pi
 }
 

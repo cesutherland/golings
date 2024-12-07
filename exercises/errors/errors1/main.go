@@ -1,15 +1,17 @@
 // errors1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // make this function return an error when b is 0: cannot divide by zero
-func divide(a, b float64) (float64, ) {  // a return is missing here
+func divide(a, b float64) (float64, error) { // a return is missing here
 	if b == 0 {
-		return 0,  // return your error here
+		return 0, errors.New("Attempt ot divide by 0.") // return your error here
 	}
 
 	return a / b, nil

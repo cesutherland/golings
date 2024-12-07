@@ -1,12 +1,11 @@
 // pointers1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
 
-func swap(a, b int) {
+func swap(a, b *int) {
 	a, b = b, a
 }
 

@@ -1,21 +1,20 @@
 // loops1
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
 
 func main() {
 	// normal for loop
-	for i; i; i { // let's print to ten
+	for i := 0; i < 11; i++ { // let's print to ten
 		fmt.Println(i)
 	}
 
 	// while loop
 	num := 1
 
-	for { // let's print to 10 using a `while` loop
+	for num < 11 { // let's print to 10 using a `while` loop
 		fmt.Println(num)
 		num++
 	}

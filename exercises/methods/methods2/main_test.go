@@ -1,7 +1,6 @@
 // maps3
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import (
@@ -19,7 +18,7 @@ func (p *Person) FullName() string {
 	return fmt.Sprintf("%s %s", p.FirstName, p.LastName)
 }
 
-func () IncrementAge() {  // something is missing
+func (p *Person) IncrementAge() { // something is missing
 	p.Age++
 }
 
@@ -28,7 +27,7 @@ func TestFullName(t *testing.T) {
 
 	expectedFullName := "John Doe"
 
-	fullName :=  // something is missing
+	fullName := person.FullName() // something is missing
 
 	if fullName != expectedFullName {
 		t.Errorf("full name should be %s but got %s", expectedFullName, fullName)
