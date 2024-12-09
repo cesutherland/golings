@@ -4,38 +4,32 @@
 package main_test
 
 import (
-	"bytes"
-	"fmt"
 	"testing"
+	"time"
 )
 
-func TestSendAndReceive(t *testing.T) {
-	var buf bytes.Buffer
+func TestSelectChannel(t *testing.T) {
+	c1 := make(chan string)
+	c2 := make(chan string)
 
-	messages := make(chan string)
-	sendAndReceive(&buf, messages)
-
-	got := buf.String()
-	want := "Hello World"
-
-	if got != want {
-		t.Errorf("got %q want %q", got, want)
-	}
-}
-
-func sendAndReceive(buf *bytes.Buffer, messages chan string) {
 	go func() {
-		messages <- "Hello"
-		messages <- "World"
-		close(messages)
+		time.Sleep(100 * time.Millisecond)
+		c1 <- "from c1"
 	}()
 
-	greeting := <-messages
-	fmt.Fprint(buf, greeting)
+	go func() {
+		time.Sleep(200 * time.Millisecond)
+		c2 <- "from c2"
+	}()
 
-	// Here we just receive the first message
-	// Consider using a for-range loop to iterate over the messages
-	for greeting := range messages {
-		fmt.Fprint(buf, " ", greeting)
+	select {
+	case msg1 := <-c1: // make sure to receive from the right channel
+		if msg1 != "from c1" {
+			t.Errorf("Expected 'from c1', got %s", msg1)
+		}
+	case msg2 := <-c2: // make sure to receive from the right channel
+		if msg2 != "from c2" {
+			t.Errorf("Expected 'from c2', got %s", msg2)
+		}
 	}
 }

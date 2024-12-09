@@ -354,3 +354,50 @@ In Go, type constraints can be declared. For this exercise, the `Number` interfa
 
 Ensure you include the appropriate type signature.
 """
+
+[[exercises]]
+name = "concurrent1"
+path = "exercises/concurrent/concurrent1/main.go"
+mode = "compile"
+hint = """
+Channels need to be made before use. Use the `chan` keyword and a type.
+
+Remember to use the `go` keyword when you want to start a goroutine.
+"""
+
+[[exercises]]
+name = "concurrent2"
+path = "exercises/concurrent/concurrent2/main_test.go"
+mode = "test"
+hint = """
+Try the for range loop to loop through all items in a channel until it's closed.
+`i := range c`
+"""
+
+[[exercises]]
+name = "concurrent3"
+path = "exercises/concurrent/concurrent3/main_test.go"
+mode = "test"
+hint = """
+Make sure to receive from the right channel in your case statement `case msg1 := <-c1:`
+"""
+
+[[exercises]]
+name = "concurrent4"
+path = "exercises/concurrent/concurrent4/main_test.go"
+mode = "test"
+hint = """
+A Mutex Lock and Unlock can help ensure safe concurrent access to shared items.
+"""
+
+[[exercises]]
+name = "json1"
+path = "exercises/json/json1/main_test.go"
+mode = "test"
+hint = """
+Take a look at `expectedJSON` to understand what exported fields are needed in the `Person` struct.
+
+The `Unmarshal` function needs to modify the `Person` so we might need a pointer.
+
+`Unmarshal` will use the zero value of a missing field. Remove the age field in the json.
+"""

@@ -24,6 +24,7 @@ Should you choose not to, here is the recommended order:
 * errors
 * anonymous functions
 * generics
+* concurrency
 
 Any feedback or questions, please reach out in [#acuity-golang](https://squarespace.enterprise.slack.com/archives/C08488AM16D)
 

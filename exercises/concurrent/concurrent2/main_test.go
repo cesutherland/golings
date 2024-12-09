@@ -4,31 +4,33 @@
 package main_test
 
 import (
-	"sync"
+	"bytes"
+	"fmt"
 	"testing"
 )
 
-func TestCounter(t *testing.T) {
-	counter := updateCounter()
-	if counter != 100 {
-		t.Errorf("Counter should be 100, but got %d", counter)
+func TestSendAndReceive(t *testing.T) {
+	var buf bytes.Buffer
+
+	messages := make(chan string)
+	sendAndReceive(&buf, messages)
+
+	got := buf.String()
+	want := "HelloWorld"
+
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
 	}
 }
 
-func updateCounter() int {
-	var counter int
-	var wg sync.WaitGroup
-	var mutex sync.Mutex
+func sendAndReceive(buf *bytes.Buffer, messages chan string) {
+	go func() {
+		messages <- "Hello"
+		messages <- "World"
+		close(messages)
+	}()
 
-	for i := 0; i < 100; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			mutex.Lock()
-			counter++ // Many goroutines trying to update the counter? We need some protection here!
-			mutex.Unlock()
-		}()
+	for s := range messages {
+		fmt.Fprint(buf, s)
 	}
-	wg.Wait()
-	return counter
 }
